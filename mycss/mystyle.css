@@ -1,0 +1,279 @@
+@import "keypad.css";
+
+:root {
+  --horizontal-space: 25px;
+  --main-border: 1px solid #ccc;
+  --main-border-gray: 1px solid rgb(204, 204, 204);
+  --active-brightness: 0.85;
+  --border-radius: 5px;
+  --box-shadow: 1px 1px 5px;
+  --color-bg-secondary: #e9e9e9;
+  --color-shadow: #f4f4f4;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --hover-brightness: 1.2;
+  --justify-important: center;
+  --justify-normal: left;
+  --line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-secondary: #555;
+    --color-shadow: #bbbbbb20;
+  }
+}
+body {
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+.header-box {
+  background-color: #333;
+  color: #ccc;
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+.page-title {
+  text-align: left;
+  padding: 15px 0;
+}
+.fa-user {
+  float: right;
+  margin-right: 20px;
+}
+.fa-align-left {
+  margin: 0 20px;
+}
+.main-screen {
+  padding: 0px 25px;
+  margin-top: 120px;
+  margin-bottom: 15px;
+}
+.blocks-screen {
+  padding: 0px 25px;
+  margin-top: 120px;
+  margin-bottom: 15px;
+  height: 150vh;
+}
+.logo-box span {
+  margin-left: 10px;
+  font-size: 25px;
+}
+.amount-box {
+  text-align: center;
+}
+.amount-box p {
+  margin: 10px;
+}
+.address-box {
+  color: #ddd;
+  background-color: #92a4b2;
+  font-size: 15px;
+  border-radius: 35px;
+  margin: 20px 40px;
+  text-align: center;
+}
+.search input {
+  width: 90%;
+  font-size: 16px;
+  background-color: #eee;
+  border: none;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.search button {
+  width: 8%;
+  font-size: 18px;
+  padding-left: 7px;
+  text-align: center;
+}
+.info-box {
+  background-color: #eee;
+  color: #555;
+  padding: 0 10px;
+  margin: 15px 0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #eee;
+  display: block;
+}
+.info-head span {
+  margin-left: 16px;
+}
+.info-data span {
+  float: right;
+  margin-right: 16px;
+}
+.block-head {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(25, 65, 255);
+  margin: 5px 0;
+}
+.block-data {
+  font-size: 14px;
+  margin: 5px 0;
+}
+.block-data span {
+  float: right;
+  margin-right: 15px;
+  font-size: 16px;
+}
+.txn-history {
+  text-align: left;
+}
+.txn-list {
+  background-color: #fff;
+  padding: 12px 12px;
+  color: #777;
+  font-size: 14px;
+  margin: 15px 0;
+  border: 1px solid var(--color-bg-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow) var(--color-shadow);
+  display: block;
+  text-align: var(--justify-normal);
+}
+.debit-amount {
+  color: red;
+  float: right;
+}
+.credit-amount {
+  color: green;
+  float: right;
+}
+
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  background-color: #eee;
+  border-top: 1px solid rgba(121, 121, 121, 0.3);
+}
+.nav__list {
+  display: flex;
+  margin: 0 30px 0 0;
+  justify-content: space-between;
+  font-size: 30px;
+  align-items: center;
+  list-style: none;
+}
+.nav__link {
+  position: relative;
+  color: #333;
+  text-decoration-line: none;
+}
+@keyframes appearBtnAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.nav__btn p {
+  font-size: 12px;
+  margin-top: 2px;
+}
+.nav__btn {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: appearBtnAnimation 0.3s ease-in-out forwards;
+}
+.nav__btn:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.nav__btn:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.nav__btn:last-child {
+  animation-delay: 0.8s;
+}
+
+#login-screen {
+  background-color: #bebebe;
+}
+.alt-header {
+  padding: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alt-header__title {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.alt-header__title span {
+  font-size: 20px;
+}
+.alt-header__column {
+  width: 33%;
+}
+.alt-header__column:first-child {
+  margin-right: auto;
+}
+.alt-header__column:nth-child(2) {
+  text-align: center;
+}
+.alt-header__column:last-child {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.alt-header__column span:last-child {
+  margin-left: 20px;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 70px;
+}
+#login-form input {
+  border: none;
+  padding: 10px 0px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+  border-color: rgb(0, 195, 255);
+}
+
+#login-form input[type="submit"] {
+  background-color: rgb(0, 195, 255);
+  cursor: pointer;
+  padding: 10px 0px;
+  border-radius: 5px;
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 15px;
+}
