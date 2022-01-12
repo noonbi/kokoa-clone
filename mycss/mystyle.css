@@ -16,7 +16,6 @@
   --justify-normal: left;
   --line-height: 1.5;
 }
-
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg-secondary: #555;
@@ -64,22 +63,55 @@ input:focus {
   margin-bottom: 15px;
   height: 150vh;
 }
-.logo-box span {
+.logo-box span:nth-child(2) {
+  text-align: left;
   margin-left: 10px;
   font-size: 25px;
 }
-.amount-box {
+.logo-box span:nth-child(3) {
+  float: right;
+  margin-top: 5px;
+  font-size: 15px;
+}
+.create-box {
   text-align: center;
+  font-size: 18px;
+}
+#create-form input {
+  margin-left: 10px;
+  font-size: 15px;
+  color: rgb(0, 0, 255);
+}
+#create-form p:nth-child(2) {
+  font-size: 13px;
+  color: rgb(120, 150, 255);
+}
+#create-form a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.amount-box {
+  font-size: 18px;
 }
 .amount-box p {
-  margin: 10px;
+  margin: 10px 10px;
 }
+.amount-box span:nth-child(1) {
+  text-align: left;
+  margin-left: 20px;
+}
+.amount-box span:nth-child(2) {
+  float: right;
+  margin-right: 70px;
+}
+
 .address-box {
   color: #ddd;
   background-color: #92a4b2;
   font-size: 15px;
   border-radius: 35px;
-  margin: 20px 40px;
+  margin: 20px 20px;
   text-align: center;
 }
 .search input {
