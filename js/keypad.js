@@ -1,6 +1,5 @@
 const keyNumber = document.querySelectorAll("#inputwrapper span");
 const pinpadTitle = document.querySelector("#pinpad-title span");
-const pinpadForm = document.querySelector("#pinpad-form");
 const KEY_CLASSNAME = "numberinput_color";
 const PINPAD_KEY = "PINPAD_KEY";
 let pinkey = "";
@@ -42,7 +41,7 @@ function saveKeyNumber() {
       savePin();
       window.location.href = "1-3.html";
     } else {
-      alert("Check your PIN");
+      alert("Check your PIN!");
     }
   }
 }
@@ -58,7 +57,14 @@ function inputKeyNumber() {
         if (count < 4) {
           if (i < 9 || i == 10) {
             count++;
+            console.log("count: ", count);
             onKeyNumber(count, i);
+            if (count == 4) {
+              count = 0;
+              setTimeout(function () {
+                saveKeyNumber();
+              }, 1000);
+            }
           }
           if (i == 9) {
             count--;
@@ -68,11 +74,6 @@ function inputKeyNumber() {
               onKeyNumber(count, i);
             }
           }
-          console.log("count: ", count);
-        }
-        if (count == 4) {
-          count = 0;
-          saveKeyNumber();
         }
       }
     })(i);

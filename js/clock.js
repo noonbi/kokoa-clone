@@ -13,7 +13,18 @@ function getClock() {
   clock.innerText = `${years}-${months}-${dates} ${hours}:${minutes}:${seconds}`;
 }
 
+function copyText() {
+  const textToCopy = document.getElementById("textToCopy").innerText;
+  //const textToCopy = document.getElementById("textToCopy").value;
+  navigator.clipboard
+    .writeText(textToCopy)
+    .then(() => {
+      alert("copied to clipboard!");
+    })
+    .catch((error) => {
+      console.error("Failed to copy text: ", error);
+    });
+}
+
 getClock();
 setInterval(getClock, 1000);
-//setInterval(sayHello, 5000);
-//setTimeout(sayHello, 5000);
