@@ -18,30 +18,14 @@ body {
 }
 .page-title {
   text-align: left;
-  padding: 15px 0;
+  padding: 10px 0;
+  font-size: 20px;
 }
 
 .main-screen {
-  padding: 0px 25px;
+  padding: 0px 15px;
   margin-top: 120px;
-  margin-bottom: 15px;
-}
-.blocks-screen {
-  padding: 0px 25px;
-  margin-top: 120px;
-  margin-bottom: 15px;
-  height: 200vh;
-}
-
-.info-box {
-  background-color: #eee;
-  color: #555;
-  padding: 0 10px;
-  margin: 15px 0;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 1px 1px 5px #eee;
-  display: block;
+  margin-bottom: 10px;
 }
 .logo-box span:nth-child(2) {
   text-align: left;
@@ -53,11 +37,48 @@ body {
   margin-top: 5px;
   font-size: 12px;
 }
+.address-box span {
+  color: #ddd;
+  background-color: #7dc7ff;
+  font-size: 12px;
+  border-radius: 35px;
+  margin: 30px 0px 30px 30px;
+  text-align: center;
+}
+.addrss-box button {
+  outline: none;
+}
+
 .amount-box {
-  font-size: 15px;
+  font-size: 16px;
 }
 .amount-box p {
   margin: 10px 10px;
+}
+.amount-box img {
+  margin-right: 0px;
+}
+.amount-box span {
+  float: right;
+}
+.blocks-screen {
+  padding: 0px 25px;
+  margin-top: 120px;
+  margin-bottom: 15px;
+  /* block-screen scroll setting */
+  max-height: 600px; /* 세로 스크롤이 필요한 영역의 최대 높이 설정 */
+  overflow-y: auto; /* 내용이 영역을 벗어날 경우에만 세로 스크롤 활성화 */
+}
+
+.info-box {
+  background-color: #eee;
+  color: #555;
+  padding: 0 10px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #eee;
+  display: block;
 }
 
 .info-head span {
@@ -87,15 +108,7 @@ body {
   color: inherit;
 }
 
-.address-box {
-  color: #ddd;
-  background-color: #92a4b2;
-  font-size: 15px;
-  border-radius: 35px;
-  margin: 20px 20px;
-  text-align: center;
-}
-.search input {
+.block-search input {
   width: 90%;
   font-size: 16px;
   background-color: #eee;
@@ -103,7 +116,7 @@ body {
   padding: 5px;
   box-sizing: border-box;
 }
-.search button {
+.block-search button {
   width: 8%;
   font-size: 18px;
   padding-left: 7px;
@@ -122,8 +135,8 @@ body {
 }
 .block-data span {
   float: right;
-  margin-right: 15px;
-  font-size: 16px;
+  margin-right: 5px;
+  font-size: 12px;
 }
 .txn-history {
   text-align: left;
@@ -153,7 +166,6 @@ body {
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding: 10px 10px;
   box-sizing: border-box;
   background-color: #eee;
   border-top: 1px solid rgba(121, 121, 121, 0.3);
@@ -161,14 +173,11 @@ body {
 /*margin: top rignt down left*/
 .nav__list {
   display: flex;
+  padding: 0px 10px;
   justify-content: space-between;
-  font-size: 25px;
+  align-items: center;
+  font-size: 20px;
   list-style: none;
-}
-.nav__link {
-  position: relative;
-  color: #333;
-  text-decoration-line: none;
 }
 @keyframes appearBtnAnimation {
   from {
@@ -184,6 +193,7 @@ body {
   margin-top: 2px;
 }
 .nav__btn {
+  text-align: center;
   transform: translateY(50px);
   opacity: 0;
   animation: appearBtnAnimation 0.3s ease-in-out forwards;
@@ -196,6 +206,11 @@ body {
 }
 .nav__btn:last-child {
   animation-delay: 0.8s;
+}
+.nav__link {
+  position: relative;
+  color: #333;
+  text-decoration-line: none;
 }
 
 #login-screen {
