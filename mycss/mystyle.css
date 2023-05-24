@@ -161,6 +161,22 @@ body {
   color: green;
   float: right;
 }
+.transfer-box {
+  background-color: #eee;
+  color: #555;
+  padding: 0 10px;
+  margin: 10px 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #eee;
+  display: block;
+}
+.transfer-box input {
+  width: 80%;
+}
+.transfer-box span {
+  margin-left: 7px;
+}
 
 .nav {
   position: fixed;
