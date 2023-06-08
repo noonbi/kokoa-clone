@@ -69,7 +69,9 @@ body {
 .blocks-screen {
   padding: 0px 25px;
   margin-top: 120px;
-  margin-bottom: 15px;
+  margin-bottom: 80px;
+}
+#blocks-list {
   /* block-screen scroll setting */
   max-height: 600px; /* 세로 스크롤이 필요한 영역의 최대 높이 설정 */
   overflow-y: auto; /* 내용이 영역을 벗어날 경우에만 세로 스크롤 활성화 */
