@@ -39,7 +39,7 @@ function saveKeyNumber() {
     if (pinkey == pressedKey) {
       console.log("Check Completed : ", pinkey);
       savePin();
-      window.location.href = "1-3.html";
+      //window.location.href = "create_wallet.html";
     } else {
       alert("Check your PIN!");
     }
@@ -48,7 +48,7 @@ function saveKeyNumber() {
 
 function inputKeyNumber() {
   const selectKey = document.querySelectorAll("#numberline div");
-  count = 0;
+  var count = 0;
 
   for (let i = 0; i < selectKey.length; i++) {
     (function (i) {
@@ -63,7 +63,7 @@ function inputKeyNumber() {
               count = 0;
               setTimeout(function () {
                 saveKeyNumber();
-              }, 1000);
+              }, 300);
             }
           }
           if (i == 9) {
