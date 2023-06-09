@@ -9,11 +9,10 @@ function saveData() {
 
 function loadData() {
   waddress = localStorage.getItem(WALLET_ADDRESS);
-  if (waddress) {
-    walletAddress.innerText = waddress;
-    //alert("Data loaded successfully: " + waddress);
+  if (waddress == "") {
+    walletAddress.innerText = "";
   } else {
-    waddress = "";
+    walletAddress.innerText = waddress;
   }
 }
 
