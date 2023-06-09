@@ -1,5 +1,6 @@
 const keyNumber = document.querySelectorAll("#inputwrapper span");
-const pinpadTitle = document.querySelector("#pinpad-title span");
+const pinpadTitle = document.querySelector("#pinpad-title");
+const pinpadKey = document.querySelector("#pinpad-key");
 const KEY_CLASSNAME = "numberinput_color";
 const PINPAD_KEY = "PINPAD_KEY";
 let pinkey = "";
@@ -39,7 +40,8 @@ function saveKeyNumber() {
     if (pinkey == pressedKey) {
       console.log("Check Completed : ", pinkey);
       savePin();
-      //window.location.href = "create_wallet.html";
+      pinpadKey = pinkey;
+      //window.location.href = "create";
     } else {
       alert("Check your PIN!");
     }
