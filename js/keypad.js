@@ -40,7 +40,7 @@ function saveKeyNumber() {
     if (pinkey == pressedKey) {
       console.log("Check Completed : ", pinkey);
       savePin();
-      pinpadKey = pinkey;
+      pinpadKey.innerText = pinkey;
       //window.location.href = "create";
     } else {
       alert("Check your PIN!");
@@ -83,7 +83,6 @@ function inputKeyNumber() {
 }
 
 const savedPinkey = localStorage.getItem(PINPAD_KEY);
-
 if (savedPinkey !== null) {
   const parsedPinkey = JSON.parse(savedPinkey);
   console.log(parsedPinkey);

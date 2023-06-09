@@ -13,7 +13,7 @@ function loadData() {
     walletAddress.innerText = waddress;
     //alert("Data loaded successfully: " + waddress);
   } else {
-    waddress = "1MZ7dWX3Gu8kLwjs7nRcUW2MHLnzC6QkGa";
+    waddress = "";
   }
 }
 
