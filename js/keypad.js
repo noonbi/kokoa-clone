@@ -2,7 +2,6 @@ const keyNumber = document.querySelectorAll("#inputwrapper span");
 const pinpadTitle = document.querySelector("#pinpad-title");
 const pinpadKey = document.querySelector("#pinpad-key");
 const KEY_CLASSNAME = "numberinput_color";
-const PINPAD_KEY = "PINPAD_KEY";
 const saveaddress = document.querySelector("#saveAddress");
 const savekey = document.querySelector("#saveKey");
 let pinkey = "";
@@ -12,8 +11,8 @@ function saveData() {
   setTimeout(function () {
     var waddress = saveaddress.innerText;
     var wkey = savekey.innerText;
-    localStorage.setItem("WALLET_ADDRESS", JSON.stringify(waddress));
-    localStorage.setItem("WALLET_KEY", JSON.stringify(wkey));
+    localStorage.setItem("WALLET_ADDRESS", waddress);
+    localStorage.setItem("WALLET_KEY", wkey);
     console.log("[keypad.js]Save waddress : ", waddress);
     console.log("[keypad.js]Save wkey : ", wkey);
   }, 200);
@@ -33,7 +32,7 @@ function onKeyNumber(cnt, number) {
 }
 
 function savePin() {
-  localStorage.setItem(PINPAD_KEY, JSON.stringify(pinkey));
+  localStorage.setItem("PINPAD_KEY", JSON.stringify(pinkey));
 }
 
 function saveKeyNumber() {
