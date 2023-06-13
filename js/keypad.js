@@ -8,14 +8,12 @@ let pinkey = "";
 let check = false;
 
 function saveData() {
-  setTimeout(function () {
-    var waddress = saveaddress.innerText;
-    var wkey = savekey.innerText;
-    localStorage.setItem("WALLET_ADDRESS", waddress);
-    localStorage.setItem("WALLET_KEY", wkey);
-    console.log("[keypad.js]Save waddress : ", waddress);
-    console.log("[keypad.js]Save wkey : ", wkey);
-  }, 200);
+  var waddress = saveaddress.innerText;
+  var wkey = savekey.innerText;
+  localStorage.setItem("WALLET_ADDRESS", waddress);
+  localStorage.setItem("WALLET_KEY", wkey);
+  console.log("[keypad.js]Save waddress : ", waddress);
+  console.log("[keypad.js]Save wkey : ", wkey);
 }
 
 function onKeyNumber(cnt, number) {
@@ -77,7 +75,10 @@ function inputKeyNumber() {
               count = 0;
               setTimeout(function () {
                 saveKeyNumber();
-              }, 300);
+              }, 200);
+              setTimeout(function () {
+                saveData();
+              }, 200);
             }
           }
           if (i == 9) {
