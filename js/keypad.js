@@ -94,7 +94,7 @@ function inputKeyNumber() {
   }
 }
 
-const savedPinkey = localStorage.getItem(PINPAD_KEY);
+const savedPinkey = localStorage.getItem("PINPAD_KEY");
 if (savedPinkey !== null) {
   const parsedPinkey = JSON.parse(savedPinkey);
   console.log(parsedPinkey);

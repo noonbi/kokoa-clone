@@ -14,7 +14,7 @@ function copyText() {
 
 function initData() {
   var wkey = "";
-  localStorage.setItem(WALLET_ADDRESS, JSON.stringify(wkey));
+  localStorage.setItem(WALLET_ADDRESS, wkey);
 }
 
 const localAddress = localStorage.getItem("WALLET_ADDRESS");
