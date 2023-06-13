@@ -1,3 +1,5 @@
+const WALLET_KEY = "WALLET_KEY";
+const WALLET_ADDRESS = "WALLET_ADDRESS";
 const keyNumber = document.querySelectorAll("#inputwrapper span");
 const pinpadTitle = document.querySelector("#pinpad-title");
 const pinpadKey = document.querySelector("#pinpad-key");
@@ -12,7 +14,9 @@ function saveData() {
   var waddress = saveaddress.innerText;
   var wkey = savekey.innerText;
   localStorage.setItem(WALLET_ADDRESS, JSON.stringify(waddress));
-  localStorage.setItem(WALLET_ADDRESS, JSON.stringify(wkey));
+  localStorage.setItem(WALLET_KEY, JSON.stringify(wkey));
+  console.log("[keypad.js]Save waddress : ", waddress);
+  console.log("[keypad.js]Save wkey : ", wkey);
 }
 
 function onKeyNumber(cnt, number) {
