@@ -3,8 +3,17 @@ const pinpadTitle = document.querySelector("#pinpad-title");
 const pinpadKey = document.querySelector("#pinpad-key");
 const KEY_CLASSNAME = "numberinput_color";
 const PINPAD_KEY = "PINPAD_KEY";
+const saveaddress = document.querySelector("#saveAddress");
+const savekey = document.querySelector("#saveKey");
 let pinkey = "";
 let check = false;
+
+function saveData() {
+  var waddress = saveaddress.innerText;
+  var wkey = savekey.innerText;
+  localStorage.setItem(WALLET_ADDRESS, JSON.stringify(waddress));
+  localStorage.setItem(WALLET_ADDRESS, JSON.stringify(wkey));
+}
 
 function onKeyNumber(cnt, number) {
   if (number == 9) {
@@ -41,7 +50,7 @@ function saveKeyNumber() {
       console.log("Check Completed : ", pinkey);
       savePin();
       pinpadKey.value = pinkey;
-      //window.location.href = "create";
+      //window.location.href = "my";
     } else {
       alert("Check your PIN!");
     }
