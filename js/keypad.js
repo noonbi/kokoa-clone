@@ -7,13 +7,18 @@ const savekey = document.querySelector("#saveKey");
 let pinkey = "";
 let check = false;
 
-function saveData() {
+function saveKeyAddress() {
   var waddress = saveaddress.innerText;
   var wkey = savekey.innerText;
   localStorage.setItem("WALLET_ADDRESS", waddress);
   localStorage.setItem("WALLET_KEY", wkey);
   console.log("[keypad.js]Save waddress : ", waddress);
   console.log("[keypad.js]Save wkey : ", wkey);
+}
+function saveData() {
+  setTimeout(function () {
+    saveKeyAddress();
+  }, 300);
 }
 
 function onKeyNumber(cnt, number) {
@@ -75,9 +80,6 @@ function inputKeyNumber() {
               count = 0;
               setTimeout(function () {
                 saveKeyNumber();
-              }, 200);
-              setTimeout(function () {
-                saveData();
               }, 200);
             }
           }
