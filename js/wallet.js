@@ -1,4 +1,3 @@
-const WALLET_ADDRESS = "WALLET_ADDRESS";
 const webAddress = document.querySelector("#textAddress");
 
 function copyText() {
@@ -18,11 +17,5 @@ function initData() {
   localStorage.setItem(WALLET_ADDRESS, JSON.stringify(wkey));
 }
 
-function loadData() {
-  if (localAddress != "") {
-    webAddress.innerText = localAddress;
-  }
-}
-
-const localAddress = localStorage.getItem(WALLET_ADDRESS);
-loadData();
+const localAddress = localStorage.getItem("WALLET_ADDRESS");
+webAddress.innerText = localAddress;
