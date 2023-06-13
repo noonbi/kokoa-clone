@@ -1,4 +1,3 @@
-const WALLET_KEY = "WALLET_KEY";
 const WALLET_ADDRESS = "WALLET_ADDRESS";
 const webAddress = document.querySelector("#textAddress");
 
