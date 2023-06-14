@@ -1,7 +1,9 @@
-const webAddress = document.querySelector("#textAddress");
+const webAddress = document.getElementById("webAddress");
+const spanValue = document.getElementById("hiddenInput");
+const savedAddress = localStorage.getItem("WALLET_ADDRESS");
 
 function copyText() {
-  const textToCopy = document.getElementById("textToCopy").innerText;
+  const textToCopy = webAddress.innerText;
   navigator.clipboard
     .writeText(textToCopy)
     .then(() => {
@@ -14,11 +16,13 @@ function copyText() {
 
 function initData() {
   var wkey = "";
-  localStorage.setItem("WALLET_ADDRESS", wkey);
+  localStorage.setItem(WALLET_ADDRESS, wkey);
 }
 
-const localAddress = localStorage.getItem("WALLET_ADDRESS");
-if (localAddress != null) {
-  webAddress.innerText = localAddress;
-  console.log("webaddress : ", localAddress);
+if (savedAddress != null) {
+  webAddress.innerText = savedAddress;
+  spanValue.value = savedAddress;
 }
+//var mySpanValue = document.getElementById("mySpan").textContent;
+//document.getElementById("hiddenInput").value = mySpanValue;
+console.log("savedAddress : ", savedAddress);
