@@ -23,12 +23,19 @@ function clickButtonAfterDelay() {
   setTimeout(function () {
     var button = document.getElementById("hiddenButton");
     button.click();
-  }, 300); // 0.3초(300밀리초) 후에 버튼을 클릭
+  }, 300); // 0.3초 마다 버튼 클릭
+}
+
+function clickButton() {
+  setTimeout(function () {
+    var button = document.getElementById("hiddenButton");
+    button.click();
+  }, 300); // 0.3초 후에 버튼 클릭(1회)
 }
 
 if (savedAddress != null) {
   webAddress.innerText = savedAddress;
   spanValue.value = savedAddress;
-  clickButtonAfterDelay();
+  clickButton();
 }
 console.log("savedAddress : ", savedAddress);
