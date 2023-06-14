@@ -1,5 +1,4 @@
 const webAddress = document.getElementById("webAddress");
-const webKey = document.getElementById("webKey");
 const spanWA = document.getElementById("hiddenWA");
 const spanWK = document.getElementById("hiddenWK");
 
@@ -30,7 +29,6 @@ function clickButton() {
 
 if (savedAddress != null) {
   webAddress.innerText = savedAddress;
-  webKey.innerText = savedKey;
   spanWA.value = savedAddress;
   spanWK.value = savedKey;
   clickButton();
