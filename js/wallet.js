@@ -27,10 +27,8 @@ function clickButtonAfterDelay() {
 }
 
 function clickButton() {
-  setTimeout(function () {
-    var button = document.getElementById("hiddenButton");
-    button.click();
-  }, 300); // 0.3초 후에 버튼 클릭(1회)
+  var button = document.getElementById("hiddenButton");
+  button.click();
 }
 
 if (savedAddress != null) {
