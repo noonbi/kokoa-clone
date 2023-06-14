@@ -19,12 +19,12 @@ function initData() {
   localStorage.setItem(WALLET_ADDRESS, wkey);
 }
 
-function clickButtonAfterDelay() {
-  setTimeout(function () {
-    var button = document.getElementById("hiddenButton");
-    button.click();
-  }, 300); // 0.3초 마다 버튼 클릭
-}
+//function clickButtonAfterDelay() {
+//  setTimeout(function () {
+//    var button = document.getElementById("hiddenButton");
+//    button.click();
+//  }, 300); // 0.3초 마다 버튼 클릭
+//}
 
 function clickButton() {
   var button = document.getElementById("hiddenButton");
