@@ -29,8 +29,6 @@ function clickButtonAfterDelay() {
 if (savedAddress != null) {
   webAddress.innerText = savedAddress;
   spanValue.value = savedAddress;
+  clickButtonAfterDelay();
 }
 console.log("savedAddress : ", savedAddress);
-
-// 페이지 로드 후 함수 호출
-window.onload = clickButtonAfterDelay;
