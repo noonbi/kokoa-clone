@@ -27,6 +27,9 @@ body {
   margin-top: 120px;
   margin-bottom: 10px;
 }
+#hiddenButton {
+  display: none;
+}
 .logo-box span:nth-child(2) {
   text-align: left;
   margin-left: 10px;
