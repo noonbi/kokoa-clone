@@ -1,6 +1,10 @@
 const webAddress = document.getElementById("webAddress");
-const spanValue = document.getElementById("hiddenInput");
+const webKey = document.getElementById("webKey");
+const spanWA = document.getElementById("hiddenWA");
+const spanWK = document.getElementById("hiddenWK");
+
 const savedAddress = localStorage.getItem("WALLET_ADDRESS");
+const savedKey = localStorage.getItem("WALLET_KEY");
 
 function copyText() {
   const textToCopy = webAddress.innerText;
@@ -26,7 +30,9 @@ function clickButton() {
 
 if (savedAddress != null) {
   webAddress.innerText = savedAddress;
-  spanValue.value = savedAddress;
+  webKey.innerText = savedKey;
+  spanWA.value = savedAddress;
+  spanWK.value = savedKey;
   clickButton();
 }
 console.log("savedAddress : ", savedAddress);
