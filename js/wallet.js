@@ -19,10 +19,18 @@ function initData() {
   localStorage.setItem(WALLET_ADDRESS, wkey);
 }
 
+function clickButtonAfterDelay() {
+  setTimeout(function () {
+    var button = document.getElementById("hiddenButton");
+    button.click();
+  }, 300); // 0.3초(300밀리초) 후에 버튼을 클릭
+}
+
 if (savedAddress != null) {
   webAddress.innerText = savedAddress;
   spanValue.value = savedAddress;
 }
-//var mySpanValue = document.getElementById("mySpan").textContent;
-//document.getElementById("hiddenInput").value = mySpanValue;
 console.log("savedAddress : ", savedAddress);
+
+// 페이지 로드 후 함수 호출
+window.onload = clickButtonAfterDelay;
