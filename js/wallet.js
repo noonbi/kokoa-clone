@@ -28,10 +28,12 @@ function clickButton() {
   console.log("button-click");
 }
 
-if (webAddress.innerText === "") {
-  webAddress.innerText = savedAddress;
-  spanWA.value = savedAddress;
-  spanWK.value = savedKey;
-  clickButton();
+function sendData() {
+  var checkData = webAddress.innerText;
+  if (checkData == "") {
+    webAddress.innerText = savedAddress;
+    spanWA.value = savedAddress;
+    spanWK.value = savedKey;
+  }
+  console.log("savedAddress : ", savedAddress);
 }
-console.log("savedAddress : ", savedAddress);
