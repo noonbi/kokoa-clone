@@ -29,7 +29,4 @@ var savedAddress = localStorage.getItem("WALLET_ADDRESS");
 var savedKey = localStorage.getItem("WALLET_KEY");
 spanWA.value = savedAddress;
 spanWK.value = savedKey;
-if savedAddress != "" {
-  clickButton();
-}
-
+clickButton();
