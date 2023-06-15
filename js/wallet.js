@@ -32,5 +32,5 @@ if (savedAddress != null) {
   spanWA.value = savedAddress;
   spanWK.value = savedKey;
   clickButton();
+  console.log("savedAddress : ", savedAddress);
 }
-console.log("savedAddress : ", savedAddress);
