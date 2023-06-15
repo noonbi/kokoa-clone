@@ -28,7 +28,7 @@ function clickButton() {
   console.log("button-click");
 }
 
-if (savedAddress != null) {
+if (webAddress.innerText === "") {
   webAddress.innerText = savedAddress;
   spanWA.value = savedAddress;
   spanWK.value = savedKey;
