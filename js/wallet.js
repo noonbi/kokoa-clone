@@ -25,6 +25,7 @@ function initData() {
 function clickButton() {
   var button = document.getElementById("hiddenButton");
   button.click();
+  console.log("button-click");
 }
 
 if (savedAddress != null) {
@@ -32,5 +33,5 @@ if (savedAddress != null) {
   spanWA.value = savedAddress;
   spanWK.value = savedKey;
   clickButton();
-  console.log("savedAddress : ", savedAddress);
 }
+console.log("savedAddress : ", savedAddress);
