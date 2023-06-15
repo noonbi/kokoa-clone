@@ -22,11 +22,11 @@ function initData() {
   localStorage.setItem(WALLET_ADDRESS, wkey);
 }
 
-function clickButton() {
-  var button = document.getElementById("hiddenButton");
-  button.click();
-  console.log("button-click");
-}
+//function clickButton() {
+//  var button = document.getElementById("hiddenButton");
+//  button.click();
+//  console.log("button-click");
+//}
 
 function sendData() {
   var checkData = webAddress.innerText;
