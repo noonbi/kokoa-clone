@@ -102,12 +102,10 @@ function initPin() {
 }
 
 const savedPinkey = localStorage.getItem("PINPAD_KEY");
-if (savedPinkey != null) {
+if (savedPinkey !== "") {
   pinkey = savedPinkey;
   check = true;
-  console.log("savedPinkey != null");
   inputKeyNumber();
 } else {
-  console.log("savedPinkey == null");
   inputKeyNumber();
 }
