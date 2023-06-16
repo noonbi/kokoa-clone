@@ -35,7 +35,7 @@ function onKeyNumber(cnt, number) {
 }
 
 function savePin() {
-  localStorage.setItem("PINPAD_KEY", JSON.stringify(pinkey));
+  localStorage.setItem("PINPAD_KEY", pinkey);
 }
 
 function saveKeyNumber() {
@@ -103,9 +103,11 @@ function initPin() {
 
 const savedPinkey = localStorage.getItem("PINPAD_KEY");
 if (savedPinkey != null) {
-  pinkey = JSON.parse(savedPinkey);
+  pinkey = savedPinkey;
   check = true;
+  console.log("savedPinkey != null");
   inputKeyNumber();
 } else {
+  console.log("savedPinkey == null");
   inputKeyNumber();
 }
