@@ -97,6 +97,10 @@ function inputKeyNumber() {
   }
 }
 
+function initPin() {
+  localStorage.setItem("PINPAD_KEY", null);
+}
+
 const savedPinkey = localStorage.getItem("PINPAD_KEY");
 if (savedPinkey != null) {
   pinkey = savedPinkey;
