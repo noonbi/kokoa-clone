@@ -40,5 +40,5 @@ function clickButtonAfterDelay() {
     button.click();
   }, 60000);
 }
-
-window.onload = clickButtonAfterDelay;
+clickButtonAfterDelay();
+//window.onload = clickButtonAfterDelay;
