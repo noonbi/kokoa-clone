@@ -37,6 +37,4 @@ function clickButton() {
   button.click();
   console.log("button-click");
 }
-
-sendmyData();
 clickButton();
