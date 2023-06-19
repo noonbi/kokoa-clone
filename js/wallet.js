@@ -25,15 +25,15 @@ function sendmyData() {
   form.action = "/my";
 
   var input1 = document.createElement("input");
-  //input.type = "hidden";
-  input.name = "data1";
-  input.value = data1;
+  input1.type = "hidden";
+  input1.name = "data1";
+  input1.value = data1;
   form.appendChild(input);
 
   var input2 = document.createElement("input");
-  //input.type = "hidden";
-  input.name = "data2";
-  input.value = data2;
+  input2.type = "hidden";
+  input2.name = "data2";
+  input2.value = data2;
   form.appendChild(input2);
   document.body.appendChild(form);
   form.submit();
