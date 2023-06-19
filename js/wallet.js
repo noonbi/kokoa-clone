@@ -32,9 +32,13 @@ function sendmyData() {
   form.submit();
 }
 
-function clickButton() {
+function clickButtonAfterDelay() {
   var button = document.getElementById("hiddenButton");
   button.click();
-  console.log("button-click");
+
+  setTimeout(function () {
+    button.click();
+  }, 60000);
 }
-clickButton();
+
+window.onload = clickButtonAfterDelay;
