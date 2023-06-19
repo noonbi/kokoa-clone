@@ -1,6 +1,4 @@
 const webAddress = document.getElementById("webAddress");
-const spanWA = document.getElementById("hiddenWA");
-const spanWK = document.getElementById("hiddenWK");
 
 function copyText() {
   const textToCopy = webAddress.innerText;
@@ -15,8 +13,30 @@ function copyText() {
 }
 
 function initData() {
-  var wkey = "";
-  localStorage.setItem(WALLET_ADDRESS, wkey);
+  localStorage.setItem("WALLET_ADDRESS", null);
+  localStorage.setItem("WALLET_KEY", null);
+}
+
+function sendmyData() {
+  var data1 = localStorage.getItem("WALLET_ADDRESS");
+  var data2 = localStorage.getItem("WALLET_KEY");
+  var form = document.createElement("form");
+  form.method = "post";
+  form.action = "/my";
+
+  var input1 = document.createElement("input");
+  //input.type = "hidden";
+  input.name = "data1";
+  input.value = data1;
+  form.appendChild(input);
+
+  var input2 = document.createElement("input");
+  //input.type = "hidden";
+  input.name = "data2";
+  input.value = data2;
+  form.appendChild(input2);
+  document.body.appendChild(form);
+  form.submit();
 }
 
 function clickButton() {
@@ -25,8 +45,5 @@ function clickButton() {
   console.log("button-click");
 }
 
-var savedAddress = localStorage.getItem("WALLET_ADDRESS");
-var savedKey = localStorage.getItem("WALLET_KEY");
-spanWA.value = savedAddress;
-spanWK.value = savedKey;
+sendmyData();
 clickButton();
