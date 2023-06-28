@@ -35,10 +35,9 @@ function sendmyData() {
 function clickButtonAfterDelay() {
   var button = document.getElementById("hiddenButton");
   button.click();
-
+  console.log("## wallet button click");
   setTimeout(function () {
     button.click();
   }, 60000);
 }
 clickButtonAfterDelay();
-//window.onload = clickButtonAfterDelay;

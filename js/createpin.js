@@ -1,25 +1,9 @@
 const keyNumber = document.querySelectorAll("#inputwrapper span");
-const pinpadTitle = document.querySelector("#pinpad-title");
-const pinpadKey = document.querySelector("#pinpad-key");
+const pinpadTitle = document.getElementById("pinpad-title");
+const pinpadKey = document.getElementById("pinpad-key");
 const KEY_CLASSNAME = "numberinput_color";
-const saveaddress = document.querySelector("#saveAddress");
-const savekey = document.querySelector("#saveKey");
 let pinkey = "";
 let check = false;
-
-function saveKeyAddress() {
-  var waddress = saveaddress.innerText;
-  var wkey = savekey.innerText;
-  localStorage.setItem("WALLET_ADDRESS", waddress);
-  localStorage.setItem("WALLET_KEY", wkey);
-  console.log("[keypad.js]Save waddress : ", waddress);
-  console.log("[keypad.js]Save wkey : ", wkey);
-}
-function saveData() {
-  setTimeout(function () {
-    saveKeyAddress();
-  }, 300);
-}
 
 function onKeyNumber(cnt, number) {
   if (number == 9) {
@@ -33,11 +17,9 @@ function onKeyNumber(cnt, number) {
     keyNumber[cnt - 1].classList.add(KEY_CLASSNAME);
   }
 }
-
 function savePin() {
   localStorage.setItem("PINPAD_KEY", pinkey);
 }
-
 function saveKeyNumber() {
   let pressedKey = "";
   for (let i = 0; i < keyNumber.length; i++) {
@@ -66,7 +48,6 @@ function saveKeyNumber() {
 function inputKeyNumber() {
   const selectKey = document.querySelectorAll("#numberline div");
   var count = 0;
-
   for (let i = 0; i < selectKey.length; i++) {
     (function (i) {
       selectKey[i].addEventListener("click", y);
@@ -96,11 +77,6 @@ function inputKeyNumber() {
     })(i);
   }
 }
-
-function initPin() {
-  localStorage.setItem("PINPAD_KEY", null);
-}
-
 const savedPinkey = localStorage.getItem("PINPAD_KEY");
 if (savedPinkey !== "") {
   pinkey = savedPinkey;
